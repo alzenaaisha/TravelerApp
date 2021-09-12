@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Traveler">
         <activity
-            android:name=".traveler_wearecutie"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
