@@ -2,9 +2,13 @@ package com.example.traveler;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 public class TabFragment1 extends Fragment {
 
@@ -40,6 +44,8 @@ public class TabFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.tab_fragment1, container, false);
+        View view = inflater.inflate(R.layout.tab_fragment1, container, false);
+
+        return view;
     }
 }

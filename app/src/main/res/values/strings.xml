@@ -3,5 +3,5 @@
     <string name="menu_pariwisata">Ini menu pariwisata</string>
     <string name="histori_transaksi">Ini histori transaksi, mungkin</string>
     <string name="menu_pariwisata_label">Pariwisata</string>
-    <string name="histori_transaksi_label">Histori Transaksi</string>
+    <string name="histori_transaksi_label">Wisata Terdekat</string>
 </resources>

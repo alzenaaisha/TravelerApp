@@ -1,3 +1,4 @@
+//adapter untuk tab/swipe
 package com.example.traveler;
 
 import android.support.v4.app.Fragment;

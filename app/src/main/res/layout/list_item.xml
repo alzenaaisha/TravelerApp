@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/gambar_wisata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/no_wisata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gambar_wisata"
+            android:padding="8dp"
+            android:textColor="@color/colorTextDefault"
+            android:textSize="@dimen/sub_judul"
+            tools:text="{id)" />
+
+        <TextView
+            android:id="@+id/nama_wisata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/gambar_wisata"
+            android:layout_toEndOf="@+id/no_wisata"
+            android:padding="8dp"
+            android:textColor="@color/colorTextDefault"
+            android:textSize="@dimen/sub_judul"
+            tools:text="{nama wisata)" />
+
+        <TextView
+            android:id="@+id/kategori_wisata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_wisata"
+            android:padding="8dp"
+            android:textColor="@color/colorTextDefault"
+            android:textSize="@dimen/teks_biasa"
+            tools:text="{Kategori wisata)" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
