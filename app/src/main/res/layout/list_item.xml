@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    app:cardBackgroundColor= "@color/colorPrimary"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp"
+    android:layout_margin="@dimen/layout_margin_pariwisata">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,22 +21,11 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/no_wisata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/gambar_wisata"
-            android:padding="8dp"
-            android:textColor="@color/colorTextDefault"
-            android:textSize="@dimen/sub_judul"
-            tools:text="{id)" />
-
-        <TextView
             android:id="@+id/nama_wisata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/gambar_wisata"
-            android:layout_toEndOf="@+id/no_wisata"
-            android:padding="8dp"
+            android:layout_below="@+id/gambar_wisata"
+            android:padding="@dimen/layout_margin_pariwisata"
             android:textColor="@color/colorTextDefault"
             android:textSize="@dimen/sub_judul"
             tools:text="{nama wisata)" />
@@ -41,8 +34,8 @@
             android:id="@+id/kategori_wisata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/no_wisata"
-            android:padding="8dp"
+            android:layout_below="@+id/nama_wisata"
+            android:padding="@dimen/layout_margin_pariwisata"
             android:textColor="@color/colorTextDefault"
             android:textSize="@dimen/teks_biasa"
             tools:text="{Kategori wisata)" />
