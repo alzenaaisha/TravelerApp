@@ -3,4 +3,5 @@
     <dimen name="judul_nama_app">36sp</dimen>
     <dimen name="teks_biasa">18sp</dimen>
     <dimen name="sub_judul">24sp</dimen>
+    <dimen name="layout_margin_pariwisata">8dp</dimen>
 </resources>
