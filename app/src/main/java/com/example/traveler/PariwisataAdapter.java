@@ -16,11 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PariwisataAdapter extends RecyclerView.Adapter<PariwisataAdapter.viewHolder> {
-    private List<PariwisataModel.Wisata> wisata=new ArrayList();
+    private List<PariwisataModel.Data> data=new ArrayList();
     private TabFragment1 mContext;
 
-    public PariwisataAdapter(TabFragment1 context, List<PariwisataModel.Wisata> wisata){
-        this.wisata=wisata;
+    public PariwisataAdapter(TabFragment1 context, List<PariwisataModel.Data> data){
+        this.data=data;
         this.mContext=context;
     }
 
@@ -33,38 +33,36 @@ public class PariwisataAdapter extends RecyclerView.Adapter<PariwisataAdapter.vi
 
     @Override
     public void onBindViewHolder(@NonNull PariwisataAdapter.viewHolder holder, int position) {
-        PariwisataModel.Wisata mWisata=wisata.get(position);
+        PariwisataModel.Data mData=data.get(position);
 
-        holder.namaWisata.setText(mWisata.getNama());
-        holder.kategoriWisata.setText(mWisata.getKategori());
+        holder.namaWisata.setText(mData.getName());
+        //holder.kategoriWisata.setText(mWisata.getKategori());
         //glide
-        //Glide.with(mContext).load(mWisata.getGambar_url()).placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_foreground).into(holder.gambarWisata);
+        //Glide.with(mContext).load(mWisata.getThumbnail()).placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_foreground).into(holder.gambarWisata);
         //picasso
-        Picasso.get().load(mWisata.getGambar_url()).resize(1920,1200).placeholder(R.drawable.loading_image).error(R.drawable.error_image).into(holder.gambarWisata);
+        Picasso.get().load(mData.getThumbnail()).resize(1920,1200).placeholder(R.drawable.loading_image).error(R.drawable.error_image).into(holder.gambarWisata);
     }
 
     @Override
     public int getItemCount() {
-        return wisata.size();
+        return data.size();
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
         ImageView gambarWisata;
 
         TextView namaWisata;
-        TextView kategoriWisata;
 
         public viewHolder(View itemView) {
             super(itemView);
             gambarWisata = itemView.findViewById(R.id.gambar_wisata);
 
             namaWisata = itemView.findViewById(R.id.nama_wisata);
-            kategoriWisata = itemView.findViewById(R.id.kategori_wisata);
         }
     }
-    public void setData(List<PariwisataModel.Wisata> data){
-        wisata.clear();
-        wisata.addAll(data);
+    public void setWisata(List<PariwisataModel.Data> wisata){
+        data.clear();
+        data.addAll(wisata);
         notifyDataSetChanged();
     }
 }

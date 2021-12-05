@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/gambar_wisata_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/nama_wisata_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gambar_wisata_detail"
+        android:padding="@dimen/layout_margin_pariwisata"
+        android:textColor="@color/colorTextDefault"
+        android:textSize="@dimen/sub_judul"
+        android:textStyle="bold"
+        tools:text="{nama wisata}" />
+
+    <TextView
+        android:id="@+id/deskripsi_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama_wisata_detail"
+        android:padding="@dimen/layout_margin_pariwisata"
+        android:textColor="@color/colorTextDefault"
+        android:textSize="@dimen/teks_biasa"
+        tools:text="{deskripsi}" />
+
+    <TextView
+        android:id="@+id/letak_lokasi_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deskripsi_detail"
+        android:padding="@dimen/layout_margin_pariwisata"
+        android:textColor="@color/colorTextDefault"
+        android:textSize="@dimen/sub_judul"
+        android:textStyle="bold"
+        android:text="@string/letak_lokasi"/>
+
+    <TextView
+        android:id="@+id/latitude_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letak_lokasi_detail"
+        android:padding="@dimen/layout_margin_pariwisata"
+        android:textColor="@color/colorTextDefault"
+        android:textSize="@dimen/teks_biasa"
+        tools:text="{latitude}" />
+
+    <TextView
+        android:id="@+id/longitude_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latitude_detail"
+        android:padding="@dimen/layout_margin_pariwisata"
+        android:textColor="@color/colorTextDefault"
+        android:textSize="@dimen/teks_biasa"
+        tools:text="{longitude}" />
+
+    <TextView
+        android:id="@+id/saran_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/longitude_detail"
+        android:padding="@dimen/layout_margin_pariwisata"
+        android:textColor="@color/colorTextDefault"
+        android:textSize="@dimen/teks_biasa"
+        android:text="@string/saran_detail" />
+</RelativeLayout>
+</ScrollView>

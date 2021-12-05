@@ -6,76 +6,57 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class PariwisataModel {
-    private List<Wisata> wisata;
+    private List<Data> data;
 
-    public List<Wisata> getWisata() {
-        return wisata;
+
+    public List<Data> getData() {
+        return data;
     }
 
-    public void setWisata(List<Wisata> wisata) {
-        this.wisata = wisata;
+    public void setData(List<Data> data) {
+        this.data = data;
     }
 
-    public static class Wisata{
-        private int id;
-        private String nama;
-        private String gambar_url;
-        private String kategori;
-
-        public Wisata(JSONObject jsonObject) {
+    public static class Data{
+        private String name;
+        private String thumbnail;
+        private static final String BASE_URL="https://fpi-pariwisata-palembang-api.herokuapp.com";
+        public Data(JSONObject jsonObject) {
             try {
-                String nama=jsonObject.getString("nama");
-                String gambar_url=jsonObject.getString("gambar_url");
-                String kategori=jsonObject.getString("kategori");
-                this.nama=nama;
-                this.gambar_url=gambar_url;
-                this.kategori=kategori;
+                String name=jsonObject.getString("name");
+                String thumbnail=jsonObject.getString("thumbnail");
+
+                this.name=name;
+                this.thumbnail=thumbnail;
+
             }
             catch (JSONException e){
                 e.printStackTrace();
             }
         }
 
-        public int getId() {
-            return id;
+        public String getName() {
+            return name;
         }
 
-        public void setId(int id) {
-            this.id = id;
+        public void setName(String name) {
+            this.name = name;
         }
 
-        public String getNama() {
-            return nama;
+        public String getThumbnail() {
+            return BASE_URL+thumbnail;
         }
 
-        public void setNama(String nama) {
-            this.nama = nama;
-        }
-
-        public String getGambar_url() {
-            return gambar_url;
-        }
-
-        public void setGambar_url(String gambar_url) {
-            this.gambar_url = gambar_url;
-        }
-
-        public String getKategori() {
-            return kategori;
-        }
-
-        public void setKategori(String kategori) {
-            this.kategori = kategori;
+        public void setThumbnail(String thumbnail) {
+            this.thumbnail = thumbnail;
         }
 
         //untuk logcat
         @Override
         public String toString() {
-            return "Wisata{" +
-                    "id=" + id +
-                    ", nama='" + nama + '\'' +
-                    ", gambar_url='" + gambar_url + '\'' +
-                    ", kategori='" + kategori + '\'' +
+            return "Data{" +
+                    ", name='" + name + '\'' +
+                    ", thumbnail='" + BASE_URL+thumbnail + '\'' +
                     '}';
         }
     }
