@@ -7,5 +7,5 @@ import retrofit2.http.GET;
 
 public interface ApiEndpoint {
     @GET("wisata")
-    Call<PariwisataModel> getData();
+    Call<PariwisataModel> getWisata();
 }

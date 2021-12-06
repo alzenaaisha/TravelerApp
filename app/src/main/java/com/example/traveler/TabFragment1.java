@@ -6,6 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
@@ -16,6 +19,7 @@ import com.example.traveler.model.PariwisataModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,7 +38,7 @@ public class TabFragment1 extends Fragment {
     private ProgressBar progressBar;
     private SearchView searchView;
     private PariwisataAdapter mainAdapter;
-    private List<PariwisataModel.Wisata> wisata=new ArrayList();
+    private List<PariwisataModel.Data> data=new ArrayList();
 
     public TabFragment1() {
         // Required empty public constructor
@@ -77,7 +81,7 @@ public class TabFragment1 extends Fragment {
     }
 
     private void setupRecyclerView(){
-        mainAdapter=new PariwisataAdapter(this, wisata);
+        mainAdapter=new PariwisataAdapter(this, data);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mainAdapter);
@@ -85,15 +89,15 @@ public class TabFragment1 extends Fragment {
 
     private void getDataFromApi(){
         progressBar.setVisibility(View.VISIBLE);
-        ApiService.endpoint().getData()
+        ApiService.endpoint().getWisata()
                 .enqueue(new Callback<PariwisataModel>() {
                     @Override
                     public void onResponse(Call<PariwisataModel> call, Response<PariwisataModel> response) {
                         if (response.isSuccessful()){
                             progressBar.setVisibility(View.GONE);
-                            List<PariwisataModel.Wisata> wisata = response.body().getWisata();
-                            Log.d(TAG, wisata.toString());
-                            mainAdapter.setData(wisata);
+                            List<PariwisataModel.Data> data = response.body().getData();
+                            Log.d(TAG, data.toString());
+                            mainAdapter.setWisata(data);
                         }
 
                     }
