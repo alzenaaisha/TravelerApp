@@ -34,8 +34,8 @@
 
     <ImageButton
         android:id="@+id/favBtn"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
