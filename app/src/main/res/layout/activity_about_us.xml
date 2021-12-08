@@ -9,6 +9,14 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="560dp"
         app:srcCompat="@drawable/alzena"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="39dp" />
@@ -17,16 +25,30 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="610dp"
         android:text="@string/Nama1"
         android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="60dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="600dp"
         android:text="@string/project_manager"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="87dp" />
@@ -35,32 +57,58 @@
         android:id="@+id/imageView2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/dea"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="420dp"
+        app:srcCompat="@drawable/dea" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="470dp"
         android:text="@string/Nama2"
         android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="188dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/ui_ux_design"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="215dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="460dp"
+        android:text="@string/ui_ux_design" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="280dp"
         app:srcCompat="@drawable/icha"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="300dp" />
@@ -69,24 +117,44 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="330dp"
         android:text="@string/Nama3"
         android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="311dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="55dp"
         android:layout_height="18dp"
-        android:text="@string/backend"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="338dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="310dp"
+        android:text="@string/backend" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="140dp"
         app:srcCompat="@drawable/maharani"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="437dp" />
@@ -95,17 +163,29 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="200dp"
         android:text="@string/Nama4"
         android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="458dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/mobile_dev"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="484dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="505dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="180dp"
+        android:text="@string/mobile_dev" />
 </RelativeLayout>
