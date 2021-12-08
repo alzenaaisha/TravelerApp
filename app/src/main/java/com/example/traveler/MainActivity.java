@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +31,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
+
+
     //variabel untuk API
     private TextView no_wisata, nama_wisata, kategori_wisata;
     private ImageView gambar_wisata;
@@ -40,10 +45,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected( MenuItem item) {
         switch(item.getItemId()){
             case R.id.item1:
-                Toast.makeText(this, "Dea, Rani,Icha, Alzena", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,AboutUs.class);
+                startActivity(intent);
+                return true;
+
+
         }
         return super.onOptionsItemSelected(item);
     }
