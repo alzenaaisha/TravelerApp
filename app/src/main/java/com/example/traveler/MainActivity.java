@@ -1,6 +1,8 @@
 package com.example.traveler;
 
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setBackgroundDrawable(
+                new ColorDrawable(Color.parseColor("#DEF0F0")));
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         //swipe tab layout
         TabLayout tabLayout = findViewById(R.id.tab_layout);
