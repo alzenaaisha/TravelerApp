@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">YourTravel</string>
     <string name="menu_pariwisata">Ini menu pariwisata</string>
-    <string name="histori_transaksi">Ini contoh halaman wisata terdekat</string>
+    <string name="histori_transaksi">Konten Favorit Masih Kosong</string>
     <string name="menu_pariwisata_label">Pariwisata</string>
-    <string name="histori_transaksi_label">Wisata Terdekat</string>
+    <string name="histori_transaksi_label">Wisata Favorit</string>
     <string name="letak_lokasi">Letak Lokasi</string>
     <string name="saran_detail">Punya kritik dan saran mengenai tempat tersebut? Ayo tulis di sini, kami bantu sampaikan!</string>
     <string name="latitude_label">Latitude  :</string>
