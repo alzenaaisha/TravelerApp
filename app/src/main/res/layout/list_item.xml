@@ -26,9 +26,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/gambar_wisata"
             android:padding="@dimen/layout_margin_pariwisata"
+            android:paddingTop="@dimen/layout_margin_pariwisata"
+            android:paddingBottom="@dimen/layout_margin_pariwisata"
             android:textColor="@color/colorTextDefault"
             android:textSize="@dimen/sub_judul"
-            tools:text="{nama wisata)" />
+            tools:text="{nama wisata}" />
 
     </RelativeLayout>
 

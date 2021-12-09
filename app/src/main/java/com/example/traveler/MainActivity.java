@@ -1,15 +1,15 @@
 package com.example.traveler;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -18,8 +18,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,36 +29,18 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-
-
     //variabel untuk API
     private TextView no_wisata, nama_wisata, kategori_wisata;
     private ImageView gambar_wisata;
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected( MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.item1:
-                Intent intent = new Intent(MainActivity.this,AboutUs.class);
-                startActivity(intent);
-                return true;
-
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setBackgroundDrawable(
+                new ColorDrawable(Color.parseColor("#DEF0F0")));
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         //swipe tab layout
         TabLayout tabLayout = findViewById(R.id.tab_layout);
@@ -89,16 +69,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         //isi fragment 1 (pariwisata) + recyclerView
         TabFragment1 pariwisata = new TabFragment1();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.placeholder, pariwisata);
         fragmentTransaction.commit();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.item1:
+                Intent intent = new Intent(MainActivity.this,AboutUs.class);
+                startActivity(intent);
+                return true;
 
 
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

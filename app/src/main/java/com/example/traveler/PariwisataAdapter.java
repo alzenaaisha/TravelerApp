@@ -1,11 +1,13 @@
 package com.example.traveler;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -20,8 +22,8 @@ public class PariwisataAdapter extends RecyclerView.Adapter<PariwisataAdapter.vi
     private TabFragment1 mContext;
 
     public PariwisataAdapter(TabFragment1 context, List<PariwisataModel.Data> data){
-        this.data=data;
-        this.mContext=context;
+        this.data = data;
+        this.mContext = context;
     }
 
     @NonNull
@@ -34,11 +36,9 @@ public class PariwisataAdapter extends RecyclerView.Adapter<PariwisataAdapter.vi
     @Override
     public void onBindViewHolder(@NonNull PariwisataAdapter.viewHolder holder, int position) {
         PariwisataModel.Data mData=data.get(position);
-
         holder.namaWisata.setText(mData.getName());
-        //holder.kategoriWisata.setText(mWisata.getKategori());
         //glide
-        //Glide.with(mContext).load(mWisata.getThumbnail()).placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_foreground).into(holder.gambarWisata);
+        //Glide.with(mContext).load(mData.getThumbnail()).placeholder(R.drawable.loading_image).error(R.drawable.error_image).into(holder.gambarWisata);
         //picasso
         Picasso.get().load(mData.getThumbnail()).resize(1920,1200).placeholder(R.drawable.loading_image).error(R.drawable.error_image).into(holder.gambarWisata);
     }
@@ -48,16 +48,29 @@ public class PariwisataAdapter extends RecyclerView.Adapter<PariwisataAdapter.vi
         return data.size();
     }
 
-    public class viewHolder extends RecyclerView.ViewHolder {
+    public class viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView gambarWisata;
-
         TextView namaWisata;
 
         public viewHolder(View itemView) {
             super(itemView);
             gambarWisata = itemView.findViewById(R.id.gambar_wisata);
-
             namaWisata = itemView.findViewById(R.id.nama_wisata);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            PariwisataModel.Data mData = data.get(getAdapterPosition());
+
+            Intent detailIntent = new Intent(mContext.getContext(), DetailActivity.class);
+            detailIntent.putExtra("name", mData.getName());
+            detailIntent.putExtra("description", mData.getDescription());
+            detailIntent.putExtra("latitude", mData.getLatitude());
+            detailIntent.putExtra("longitude", mData.getLongitude());
+            detailIntent.putExtra("thumbnail",
+                    mData.getThumbnail());
+            mContext.startActivity(detailIntent);
         }
     }
     public void setWisata(List<PariwisataModel.Data> wisata){

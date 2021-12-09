@@ -6,6 +6,9 @@
     <string name="histori_transaksi_label">Wisata Favorit</string>
     <string name="letak_lokasi">Letak Lokasi</string>
     <string name="saran_detail">Punya kritik dan saran mengenai tempat tersebut? Ayo tulis di sini, kami bantu sampaikan!</string>
+    <string name="latitude_label">Latitude  :</string>
+    <string name="longitude_label">Longitude:</string>
+    <string name="lokasi_button_label">Cek Lokasi Sekarang</string>
     <string name="Nama1">Alzena Aisha Shakira</string>
     <string name="project_manager">Project Manager</string>
     <string name="Nama2">Dea Salsabila</string>

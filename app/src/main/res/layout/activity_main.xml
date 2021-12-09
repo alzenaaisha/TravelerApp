@@ -15,8 +15,8 @@
         android:id="@+id/nama_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
+        android:layout_marginStart="@dimen/margin_logo"
+        android:layout_marginLeft="@dimen/margin_logo"
         android:text="@string/app_name"
         android:textColor="@color/colorTextDefault"
         android:textSize="@dimen/judul_nama_app" />
@@ -27,7 +27,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="@dimen/margin_logo"
         android:src="@drawable/logo_app" />
 
     <android.support.design.widget.TabLayout

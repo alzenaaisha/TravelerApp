@@ -13,5 +13,4 @@ public class AboutUs extends AppCompatActivity {
         // Get the intent and its data.
         Intent intent = getIntent();
     }
-
 }
