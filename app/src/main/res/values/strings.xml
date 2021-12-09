@@ -14,4 +14,6 @@
     <string name="ui_ux_design">UI/UX Design</string>
     <string name="backend">Backend</string>
     <string name="mobile_dev">Mobile Dev</string>
+    <string name="lokaktraveler">LokakTraveler</string>
+    <string name="lokaktravelpalembang_jalan_com">lokaktravelpalembang@jalan.com</string>
 </resources>
