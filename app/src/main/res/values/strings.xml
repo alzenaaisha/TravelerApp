@@ -5,8 +5,13 @@
     <string name="menu_pariwisata_label">Pariwisata</string>
     <string name="histori_transaksi_label">Wisata Terdekat</string>
     <string name="letak_lokasi">Letak Lokasi</string>
-    <string name="saran_detail">Punya kritik dan saran mengenai tempat ini? Ayo tulis di sini, kami bantu sampaikan!</string>
-    <string name="latitude_label">Latitude  :</string>
-    <string name="longitude_label">Longitude:</string>
-    <string name="lokasi_button_label">Cek Lokasi Sekarang</string>
+    <string name="saran_detail">Punya kritik dan saran mengenai tempat tersebut? Ayo tulis di sini, kami bantu sampaikan!</string>
+    <string name="Nama1">Alzena Aisha Shakira</string>
+    <string name="project_manager">Project Manager</string>
+    <string name="Nama2">Dea Salsabila</string>
+    <string name="Nama3">Icha Marwanda</string>
+    <string name="Nama4">Maharani</string>
+    <string name="ui_ux_design">UI/UX Design</string>
+    <string name="backend">Backend</string>
+    <string name="mobile_dev">Mobile Dev</string>
 </resources>

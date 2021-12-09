@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.traveler" >
+    package="com.example.traveler">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,10 +11,8 @@
         android:roundIcon="@drawable/logo_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.Traveler"
-        android:usesCleartextTraffic="true" >
-        <activity
-            android:name=".DetailActivity"
-            android:exported="true" />
+        android:usesCleartextTraffic="true">
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -26,13 +24,15 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-    </application>
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.BROWSABLE" />
-            <data android:scheme="https" android:host="developer.android.com"  />
-        </intent>
-    </queries>
+            android:exported="true"></activity>
+
+        <activity android:name=".AboutUs"
+            android:label = "About Us"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value= ".MainActivity"/>
+        </activity>
+
+</application>
 </manifest>
